@@ -1,0 +1,720 @@
+:root {
+    font-family: 'Barlow', sans-serif;
+    background-color: rgb(237, 237, 237);
+    overflow-x: hidden;
+    /* stop horizontal scrollbar from appearing when vertical scrollbar appears */
+}
+
+@media (-webkit-device-pixel-ratio: 1) {
+
+    /* apply to all pages.
+    this part could probably also be outside the @media but i'm not risking it given the amount of effort it took the last time a made a mistake */
+    body {
+        padding: 0 auto;
+        margin: 0 auto;
+    }
+
+    /* begin nav */
+    nav {
+        margin-top: 0;
+    }
+
+    nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #006445;
+    }
+
+    #nav-logo {
+        margin-left: 12.5vw;
+        background: inherit;
+    }
+
+    nav ul img {
+        background-color: rgb(237, 237, 237);
+        border: 5px solid rgb(237, 237, 237);
+    }
+
+    nav ul li {
+        float: left;
+    }
+
+    #nav-logo a {
+        margin: 15px 16px 15px 0;
+    }
+
+    /* hover effect from:
+    https://codepen.io/team/css-tricks/pen/gOXMgxR */
+    nav ul li a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    nav ul li a {
+        /* this is not for the hover effect but i can't have the same selector twice */
+        display: block;
+        color: rgb(237, 237, 237);
+        text-align: center;
+        font-size: 23px;
+        margin: 34px 16px;
+        text-decoration: none;
+        font-weight: bold;
+        /* this is the hover effect */
+        background:
+            linear-gradient(to right,
+                rgba(0, 100, 69, 1),
+                rgba(0, 100, 69, 1)),
+            linear-gradient(to right,
+                rgba(219, 255, 74, 1),
+                rgba(219, 255, 74, 1));
+        background-size: 100% 3px, 0 3px;
+        background-position: 100% 100%, 0 100%;
+        background-repeat: no-repeat;
+        transition: background-size 400ms;
+
+    }
+
+    a:hover {
+        background-size: 0 3px, 100% 3px;
+
+    }
+
+    /* end nav */
+
+    main {
+        width: 75vw;
+        /* border: solid 1px black; */
+        margin: 2vh 0 2vh 12.5vw;
+        overflow: auto;
+        min-height: 75.1vh;
+
+        /* this will make the div stretch to fit the img within*/
+        #text {
+            text-align: left;
+            width: 45%;
+            margin-top: 2cm;
+
+        }
+    }
+
+    /* begin footer */
+
+    footer {
+        bottom: 0;
+        background-color: #006445;
+        width: 100vw;
+        height: 100%;
+    }
+
+    #footer-logo {
+        margin-left: 12.5vw;
+        padding: 20px 0;
+        width: 10vw;
+    }
+
+    #footer-logo img {
+        background: inherit;
+        background-color: rgb(237, 237, 237);
+        border: 5px solid rgb(237, 237, 237);
+    }
+
+    #footer-text {
+        width: 25vw;
+    }
+
+    #footer-text a {
+        color: rgb(237, 237, 237);
+        padding: 0 10px;
+    }
+
+    #socials {
+        padding-left: 4vw;
+        text-decoration: none;
+    }
+
+    .child {
+        display: inline-block;
+        vertical-align: middle;
+        padding: 0 10px;
+    }
+
+    .youtube img {
+        width: 5.5vw;
+    }
+
+    #instagram-logo {
+        width: 2.7vw;
+    }
+
+    #instagram-wordmark {
+        margin-left: -10px;
+        width: 5.5vw;
+    }
+
+    .linkedin img {
+        width: 7vw;
+        filter: invert(100%);
+    }
+
+    .twitter img {
+        width: 1.7vw;
+        filter: invert(100%);
+    }
+
+    .facebook img {
+        width: 8vw;
+        filter: brightness(0) invert(1);
+    }
+
+    /* end footer */
+
+    /* end apply to all pages */
+
+    /* start home */
+
+    #engineering {
+        text-align: right;
+        float: right;
+        margin: -8.5cm 50px 0 0;
+        width: 650px;
+    }
+
+    main form {
+        width: 13vw;
+        border: solid 3px #dbff4a;
+        border-radius: 10px;
+        float: left;
+        margin: 600px -350px 0 200px;
+    
+    }
+
+    main form button:hover {
+        cursor: pointer;
+    }
+
+    main form button {
+        background-color: #dbff4a;
+        border: solid 5px #dbff4a;
+        font-size: 1.3em;
+        font-weight: bold;
+        columns: #0f2b22;
+        width: 100%;
+    }
+
+    #text h1 {
+        text-align: center;
+        color: #006445;
+        font-weight: bolder;
+        font-size: 3em;
+    }
+
+    #home-subtext {
+        font-size: 1.4em;
+        font-weight: bold;
+    }
+
+
+    /* end home */
+
+    /* start quiz */
+
+    main #main-quiz,
+    #quiz,
+    #submit,
+    #results {
+        font-size: 1.3em;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .question {
+        font-size: 1.6em;
+        font-weight: bold;
+        color: #005439;
+    }
+
+    #submit {
+        background-color: #dbff4a;
+        border: solid 5px #dbff4a;
+        font-size: 1.3em;
+        columns: #0f2b22;
+        position: relative;
+        margin: 15px 0;
+        border-radius: 10px;
+        font-size: 1em;
+        
+    }
+
+    #submit:hover {
+        cursor: pointer;
+    }
+
+    .individual-answer label:hover {
+        cursor: pointer;
+    }
+
+    /* Stijl voor correcte antwoorden */
+    .correct {
+        background-color: lightgreen;
+    }
+
+    /* Stijl voor foute antwoorden */
+    .incorrect {
+        background-color: lightcoral;
+    }
+
+    /* end quiz */
+    /* start open-dagen */
+    #Open-Dagen h1 {
+        text-align: center;
+        color: #006445;
+        font-weight: bolder;
+        font-size: 3em;
+        margin-top: 1cm;
+    }
+
+    #Open-Dagen p {
+        text-align: left;
+        font-size: 1.4em;
+        width: 45%;
+        margin: 1.5cm 0 0 16cm;
+
+    }
+
+    #student {
+        position: absolute;
+        width: 400px;
+        margin: 3cm 10cm 0 2cm;
+    }
+
+    #open-timer {
+        position: absolute;
+        text-align: left;
+        width: 45%;
+        margin: -880px 0 0 16cm;
+        font-size: 1.6em;
+    }
+
+    #info-timer {
+        position: absolute;
+        text-align: left;
+        width: 45%;
+        margin: -800px 0 0 16cm;
+        font-size: 1.6em;
+    }
+
+    #video {
+        margin: 10cm 0 2cm 22%;
+        aspect-ratio: 16/9;
+        width: 800px;
+    }
+
+    #open-dagen-subtext {
+        font-size: 1.2em;
+        font-weight: bold;
+    }
+
+    /* end open-dagen */
+
+    /* start skilltree */
+
+    #skilltree {
+        text-align: center;
+    }
+
+    /* end skiltree*/
+
+    /* start disclaimer*/
+    #disclaimer h1 {
+        font-size: 3em;
+    }
+
+    #disclaimer h2 {
+        font-size: 2em
+    }
+
+    #disclaimer p {
+        font-size: 1.5em;
+        font-weight: bold;
+    }
+
+    /* end disclaimer*/
+    /* start privacy*/
+    #privacy h1 {
+        font-size: 3em;
+    }
+
+    #privacy h2 {
+        font-size: 2em
+    }
+
+    #privacy p {
+        font-size: 1.5em;
+        font-weight: bold;
+    }
+
+    /* end privacy*/
+    /* start cookies*/
+    #cookies h1 {
+        font-size: 3em;
+    }
+
+    #cookies strong {
+        font-size: 1.5em;
+    }
+
+    /* end cookies*/
+}
+
+@media (-webkit-device-pixel-ratio: 1.25) {
+
+    /* apply to all pages */
+    body {
+        padding: 0 auto;
+        margin: 0 auto;
+    }
+
+    /* begin nav */
+    nav {
+        margin-top: 0;
+    }
+
+    nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #006445;
+    }
+
+    #nav-logo {
+        margin-left: 12.5vw;
+        background: inherit;
+    }
+
+    nav ul img {
+        background-color: rgb(237, 237, 237);
+        border: 5px solid rgb(237, 237, 237);
+    }
+
+    nav ul li {
+        float: left;
+    }
+
+    #nav-logo a {
+        margin: 15px 16px 15px 0;
+    }
+
+    /* hover effect from:
+https://codepen.io/team/css-tricks/pen/gOXMgxR */
+    nav ul li a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    nav ul li a {
+        /* this is not for the hover effect but i can't have the same selector twice */
+        display: block;
+        color: rgb(237, 237, 237);
+        text-align: center;
+        font-size: 23px;
+        margin: 34px 16px;
+        text-decoration: none;
+        font-weight: bold;
+        /* this is the hover effect */
+        background:
+            linear-gradient(to right,
+                rgba(0, 100, 69, 1),
+                rgba(0, 100, 69, 1)),
+            linear-gradient(to right,
+                rgba(219, 255, 74, 1),
+                rgba(219, 255, 74, 1));
+        background-size: 100% 3px, 0 3px;
+        background-position: 100% 100%, 0 100%;
+        background-repeat: no-repeat;
+        transition: background-size 400ms;
+
+    }
+
+    a:hover {
+        background-size: 0 3px, 100% 3px;
+
+    }
+
+    /* end nav */
+
+    main {
+        width: 75vw;
+        /* height: 200px; */
+        /* border: solid 1px black; */
+        margin: 2vh 0 2vh 12.5vw;
+        overflow: auto;
+        min-height: 75.1vh;
+
+        /* this will make the div stretch to fit the img within*/
+        #text {
+            text-align: left;
+            width: 45%;
+            margin-top: 2cm;
+
+        }
+    }
+
+    /* begin footer */
+
+    footer {
+        bottom: 0;
+        background-color: #006445;
+        width: 100vw;
+        height: 100%;
+    }
+
+    #footer-logo {
+        margin-left: 12.5vw;
+        padding: 20px 0;
+        width: 10vw;
+    }
+
+    #footer-logo img {
+        background: inherit;
+        background-color: rgb(237, 237, 237);
+        border: 5px solid rgb(237, 237, 237);
+    }
+
+    #footer-text {
+        width: 25vw;
+    }
+
+    #footer-text a {
+        color: rgb(237, 237, 237);
+        padding: 0 10px;
+    }
+
+    #socials {
+        padding-left: 4vw;
+        text-decoration: none;
+    }
+
+    .child {
+        display: inline-block;
+        vertical-align: middle;
+        padding: 0 10px;
+    }
+
+    .youtube img {
+        width: 5.5vw;
+    }
+
+    #instagram-logo {
+        width: 2.7vw;
+    }
+
+    #instagram-wordmark {
+        margin-left: -10px;
+        width: 5.5vw;
+    }
+
+    .linkedin img {
+        width: 7vw;
+        filter: invert(100%);
+    }
+
+    .twitter img {
+        width: 1.7vw;
+        filter: invert(100%);
+    }
+
+    .facebook img {
+        width: 8vw;
+        filter: brightness(0) invert(1);
+    }
+
+    /* end footer */
+
+    /* end apply to all pages */
+
+    /* start home */
+
+    #engineering {
+        text-align: right;
+        float: right;
+        margin: -8.5cm 50px 0 0;
+        width: 550px;
+    }
+
+    main form {
+        width: 13vw;
+        border: solid 3px #dbff4a;
+        border-radius: 10px;
+        float: left;
+        margin: 500px -350px 0 180px;
+    }
+
+    main form button:hover {
+        cursor: pointer;
+    }
+
+    main form button {
+        background-color: #dbff4a;
+        border: solid 3px #dbff4a;
+        font-size: 1.1em;
+        font-weight: bold;
+        columns: #0f2b22;
+        width: 100%;
+    }
+
+    #text h1 {
+        text-align: center;
+        color: #006445;
+        font-weight: bolder;
+        font-size: 2.5em;
+    }
+
+    #home-subtext {
+        font-size: 1.2em;
+        font-weight: bold;
+    }
+
+
+    /* end home */
+
+    /* start quiz */
+
+    main #main-quiz,
+    #quiz,
+    #submit,
+    #results {
+        font-size: 1.2em;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .question {
+        font-size: 1.4em;
+        font-weight: bolder;
+        color: #005439;
+    }
+
+    #submit {
+        background-color: #dbff4a;
+        border: solid 3px #dbff4a;
+        font-size: 1.1em;
+        columns: #0f2b22;
+        position: relative;
+        margin: 15px 0;
+    }
+
+    /* Stijl voor correcte antwoorden */
+    .correct {
+        background-color: lightgreen;
+    }
+
+    /* Stijl voor foute antwoorden */
+    .incorrect {
+        background-color: lightcoral;
+    }
+
+    /* end quiz */
+    /* start open-dagen */
+    #Open-Dagen h1 {
+        text-align: center;
+        color: #006445;
+        font-weight: bolder;
+        font-size: 2.5em;
+        margin-top: 1cm;
+    }
+
+    #Open-Dagen p {
+        text-align: left;
+        width: 45%;
+        margin: 1.5cm 0 0 15cm;
+
+    }
+
+    #student {
+        position: absolute;
+        width: 400px;
+        margin: 3cm 10cm 0 2cm;
+    }
+
+    #open-timer {
+        position: absolute;
+        text-align: left;
+        width: 45%;
+        margin: -880px 0 0 15cm;
+    }
+
+    #info-timer {
+        position: absolute;
+        text-align: left;
+        width: 45%;
+        margin: -800px 0 0 15cm;
+    }
+
+    #video {
+        margin: 10cm 0 2cm 16%;
+        aspect-ratio: 16/9;
+        width: 800px;
+    }
+
+    #open-dagen-subtext {
+        font-size: 1.2em;
+        font-weight: bold;
+    }
+
+    /* end open-dagen */
+
+    /* start skilltree */
+
+    #skilltree {
+        text-align: center;
+    }
+
+    #skilltree-sander {
+        width: 90%;
+    }
+
+    /* end skiltree*/
+    /* start disclaimer*/
+    #disclaimer h1 {
+        font-size: 3em;
+    }
+
+    #disclaimer h2 {
+        font-size: 2em
+    }
+
+    #disclaimer p {
+        font-size: 1.5em;
+        font-weight: bold;
+    }
+
+    /* end disclaimer*/
+    /* start privacy*/
+    #privacy h1 {
+        font-size: 3em;
+    }
+
+    #privacy h2 {
+        font-size: 2em
+    }
+
+    #privacy p {
+        font-size: 1.5em;
+        font-weight: bold;
+    }
+
+    /* end privacy*/
+    /* start cookies*/
+    #cookies h1 {
+        font-size: 3em;
+    }
+
+    #cookies strong {
+        font-size: 1.5em;
+    }
+
+    /* end cookies*/
+}
