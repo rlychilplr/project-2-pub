@@ -1,5 +1,7 @@
 # project-2
 
+For this project i got a 7.6/10
+
 started on 14 november 2023 and to be turned in by 22 january 2024
 
 The requirements of the website can be found [here](documentatie/eisen.md) in dutch
